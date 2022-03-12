@@ -477,6 +477,7 @@ body {
 body {
   font-family: "Lato", sans-serif;
   background-color: #f6f6f6;
+  background-image: url(../images/backgrounds/bg.png);
 }
 
 .container {
@@ -598,6 +599,15 @@ body {
 }
 
 @media (max-width: 992px) {
+  .main .container .main__info button {
+    padding: 1.7vw;
+    max-width: 23vw;
+    width: 100%;
+    font-size: 2.4vw;
+  }
+}
+
+@media (max-width: 768px) {
   .main {
     padding: 15px 0;
     grid-gap: 6vw;
@@ -641,7 +651,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .main .container .main__info h1 {
     font-size: 10vw;
   }
