@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
 
 body {
-	font-family: "Roboto", sans-serif;
+	font-family: "Lato", sans-serif;
 	background-color: #f6f6f6;
 }
 
@@ -97,6 +97,12 @@ body {
 
 				.main__name {
 					font-size: 2.2vw;
+
+					&::before {
+						bottom: 0.6vw;
+						width: 3.5vw;
+						border-bottom: 0.3vw solid #544947;
+					}
 				}
 			}
 			.main__photo {
