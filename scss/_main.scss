@@ -1,9 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
 
 body {
-	font-family: "Lato", sans-serif;
+	font-family: "Montserrat", sans-serif;
 	background-color: #f6f6f6;
-	background-image: url(../images/backgrounds/bg.png);
 }
 
 .container {
@@ -27,7 +26,7 @@ body {
 
 			.main__name {
 				color: #544947;
-				font-weight: 900;
+				font-weight: 700;
 				font-size: 32px;
 
 				&::before {
@@ -42,7 +41,7 @@ body {
 			}
 
 			h1 {
-				font-size: 82px;
+				font-size: 70px;
 				font-weight: 900;
 				max-width: 717px;
 				width: 100%;
@@ -59,11 +58,10 @@ body {
 				padding: 15px;
 				background-color: #544947;
 				color: #fff;
-				border-radius: 5px;
 				max-width: 220px;
 				font-size: 24px;
 				transition: background-color 0.3s ease-in-out;
-				margin: 0;
+				margin: auto 0 0 0;
 
 				&:hover {
 					background-color: #7a6a67;
@@ -76,7 +74,6 @@ body {
 			img {
 				width: 100%;
 				height: auto;
-				border-radius: 5px;
 				display: block;
 			}
 		}
@@ -85,15 +82,15 @@ body {
 	@media (max-width: 1470px) {
 		.container {
 			.main__info {
-				grid-gap: 4vw;
+				grid-gap: 3.3vw;
 
 				h1 {
 					max-width: 49vw;
-					font-size: 5.5vw;
+					font-size: 4.9vw;
 				}
 
 				.main__subtitle {
-					font-size: 1.8vw;
+					font-size: 1.75vw;
 				}
 
 				.main__name {
@@ -114,7 +111,12 @@ body {
 		}
 	}
 
+	@media (max-width: 1200px) {
+		padding: 60px 0;
+	}
+
 	@media (max-width: 992px) {
+		padding: 40px 0;
 		.container {
 			.main__info {
 				button {
@@ -135,8 +137,9 @@ body {
 			.main__info {
 				width: 100%;
 				max-width: 100%;
+				grid-gap: 7.3vw;
 				h1 {
-					font-size: 9vw;
+					font-size: 9.5vw;
 					max-width: 100%;
 					text-align: center;
 				}
@@ -176,7 +179,7 @@ body {
 		.container {
 			.main__info {
 				h1 {
-					font-size: 10vw;
+					font-size: 9.5vw;
 				}
 
 				.main__subtitle {
@@ -195,6 +198,166 @@ body {
 				}
 			}
 			.main__photo {
+			}
+		}
+	}
+}
+
+.works {
+	padding-bottom: 100px;
+	.container {
+		h2 {
+			font-size: 70px;
+			font-weight: 900;
+			max-width: 100%;
+			width: 100%;
+			text-align: center;
+			margin-bottom: 100px;
+		}
+
+		.works__wrapper {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 25px;
+			.works__item {
+				position: relative;
+
+				.img-wrapper {
+					height: 715px;
+
+					img {
+						height: 100%;
+						width: 100%;
+						display: block;
+						box-shadow: 0px 0px 17px 7px rgba(0, 0, 0, 0.03);
+						position: relative;
+						object-fit: cover;
+					}
+
+					&::after {
+						content: "";
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						transition: opacity 0.25s ease;
+						z-index: 1;
+						background: linear-gradient(180deg, transparent, #000);
+						opacity: 0.6;
+					}
+				}
+
+				.item__info {
+					position: absolute;
+					bottom: 40px;
+					left: 50%;
+					transform: translateX(-50%);
+					color: #fff;
+					z-index: 10;
+					width: 100%;
+					h3 {
+						font-size: 48px;
+						font-weight: 700;
+						text-align: center;
+					}
+
+					.info__subtitle {
+						font-size: 28px;
+						font-weight: 700;
+						display: inline-block;
+						width: 100%;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1470px) {
+		.container {
+			h2 {
+				font-size: 4.9vw;
+			}
+
+			.works__wrapper {
+				.works__item {
+					.img-wrapper {
+						height: 48vw;
+						img {
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1200px) {
+		padding-bottom: 60px;
+		.container {
+			h2 {
+				margin-bottom: 60px;
+			}
+
+			.works__wrapper {
+				.works__item {
+					.img-wrapper {
+						img {
+						}
+					}
+
+					.item__info {
+						h3 {
+							font-size: 4vw;
+						}
+
+						.info__subtitle {
+							font-size: 2vw;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 992px) {
+		padding-bottom: 40px;
+		.container {
+			h2 {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding-bottom: 15px;
+		.container {
+			h2 {
+				margin-bottom: 40px;
+				margin-top: 10vw;
+				font-size: 9.5vw;
+			}
+
+			.works__wrapper {
+				grid-template-columns: repeat(1, 1fr);
+				.works__item {
+					.img-wrapper {
+						height: 94vw;
+						img {
+						}
+					}
+
+					.item__info {
+						bottom: 9vw;
+						h3 {
+							font-size: 8vw;
+						}
+
+						.info__subtitle {
+							font-size: 4vw;
+						}
+					}
+				}
 			}
 		}
 	}
