@@ -75,6 +75,7 @@ body {
 				width: 100%;
 				height: auto;
 				display: block;
+				box-shadow: 0px 0px 17px 7px rgba(0, 0, 0, 0.07);
 			}
 		}
 	}
@@ -223,7 +224,7 @@ body {
 				position: relative;
 
 				.img-wrapper {
-					height: 715px;
+					height: 695px;
 
 					img {
 						height: 100%;
@@ -283,7 +284,7 @@ body {
 			.works__wrapper {
 				.works__item {
 					.img-wrapper {
-						height: 48vw;
+						height: 47vw;
 						img {
 						}
 					}
@@ -340,9 +341,10 @@ body {
 
 			.works__wrapper {
 				grid-template-columns: repeat(1, 1fr);
+				grid-gap: 15px;
 				.works__item {
 					.img-wrapper {
-						height: 94vw;
+						height: 93vw;
 						img {
 						}
 					}
@@ -358,6 +360,96 @@ body {
 						}
 					}
 				}
+			}
+		}
+	}
+}
+
+.my-popup {
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.452);
+	display: none;
+	z-index: 1000;
+	padding: 15px;
+
+	.my-popup__inner {
+		padding: 25px;
+		max-width: 500px;
+		max-height: 235px;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #f6f6f6;
+		margin: auto;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+
+		h3 {
+			font-size: 32px;
+			font-weight: 700;
+			margin-bottom: 30px;
+		}
+
+		.contacts {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			grid-gap: 20px;
+			font-weight: 500;
+			font-size: 16px;
+			color: #777777;
+
+			.telegram {
+				transition: color 0.3s ease-in-out;
+
+				&:hover {
+					color: #229ed9;
+					cursor: pointer;
+				}
+			}
+
+			.mail {
+				transition: color 0.3s ease-in-out;
+
+				&:hover {
+					color: #bb001b;
+					cursor: pointer;
+				}
+			}
+
+			.num {
+				transition: color 0.3s ease-in-out;
+
+				&:hover {
+					color: #25d366;
+					cursor: pointer;
+				}
+			}
+		}
+
+		.close {
+			position: absolute;
+			top: 7px;
+			right: 13px;
+			font-size: 20px;
+			font-weight: 900;
+			color: #c2c2c2;
+			transition: color 0.3s ease-in-out;
+
+			&:hover {
+				color: #7a6a67;
+				cursor: pointer;
 			}
 		}
 	}

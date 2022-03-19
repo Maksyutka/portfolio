@@ -567,6 +567,8 @@ body {
   width: 100%;
   height: auto;
   display: block;
+  -webkit-box-shadow: 0px 0px 17px 7px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 0px 17px 7px rgba(0, 0, 0, 0.07);
 }
 
 @media (max-width: 1470px) {
@@ -700,7 +702,7 @@ body {
 }
 
 .works .container .works__wrapper .works__item .img-wrapper {
-  height: 715px;
+  height: 695px;
 }
 
 .works .container .works__wrapper .works__item .img-wrapper img {
@@ -759,7 +761,7 @@ body {
     font-size: 4.9vw;
   }
   .works .container .works__wrapper .works__item .img-wrapper {
-    height: 48vw;
+    height: 47vw;
   }
 }
 
@@ -799,9 +801,10 @@ body {
   .works .container .works__wrapper {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
   }
   .works .container .works__wrapper .works__item .img-wrapper {
-    height: 94vw;
+    height: 93vw;
   }
   .works .container .works__wrapper .works__item .item__info {
     bottom: 9vw;
@@ -812,6 +815,119 @@ body {
   .works .container .works__wrapper .works__item .item__info .info__subtitle {
     font-size: 4vw;
   }
+}
+
+.my-popup {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.452);
+  display: none;
+  z-index: 1000;
+  padding: 15px;
+}
+
+.my-popup .my-popup__inner {
+  padding: 25px;
+  max-width: 500px;
+  max-height: 235px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f6f6f6;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.my-popup .my-popup__inner h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.my-popup .my-popup__inner .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #777777;
+}
+
+.my-popup .my-popup__inner .contacts .telegram {
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.my-popup .my-popup__inner .contacts .telegram:hover {
+  color: #229ed9;
+  cursor: pointer;
+}
+
+.my-popup .my-popup__inner .contacts .mail {
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.my-popup .my-popup__inner .contacts .mail:hover {
+  color: #bb001b;
+  cursor: pointer;
+}
+
+.my-popup .my-popup__inner .contacts .num {
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.my-popup .my-popup__inner .contacts .num:hover {
+  color: #25d366;
+  cursor: pointer;
+}
+
+.my-popup .my-popup__inner .close {
+  position: absolute;
+  top: 7px;
+  right: 13px;
+  font-size: 20px;
+  font-weight: 900;
+  color: #c2c2c2;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.my-popup .my-popup__inner .close:hover {
+  color: #7a6a67;
+  cursor: pointer;
 }
 
 .footer {
