@@ -487,6 +487,8 @@ body {
 			font-weight: 900;
 			color: #c2c2c2;
 			transition: color 0.3s ease-in-out;
+			-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+			-webkit-tap-highlight-color: transparent;
 
 			&:hover {
 				color: #7a6a67;
