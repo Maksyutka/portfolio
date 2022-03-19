@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
 
+::-webkit-scrollbar {
+	width: 2px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #544947;
+}
+
 body {
 	font-family: "Montserrat", sans-serif;
 	background-color: #f6f6f6;
@@ -10,6 +22,10 @@ body {
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 15px;
+}
+
+.overflowed {
+	overflow: hidden;
 }
 
 .main {
@@ -62,6 +78,8 @@ body {
 				font-size: 24px;
 				transition: background-color 0.3s ease-in-out;
 				margin: auto 0 0 0;
+				-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+				-webkit-tap-highlight-color: transparent;
 
 				&:hover {
 					background-color: #7a6a67;
@@ -221,10 +239,24 @@ body {
 			grid-template-columns: repeat(2, 1fr);
 			grid-gap: 25px;
 			.works__item {
+				-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+				-webkit-tap-highlight-color: transparent;
 				position: relative;
+				overflow: hidden;
+
+				&:hover {
+					.img-wrapper {
+						img {
+							height: 102%;
+						}
+					}
+				}
 
 				.img-wrapper {
 					height: 695px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
 
 					img {
 						height: 100%;
@@ -233,6 +265,7 @@ body {
 						box-shadow: 0px 0px 17px 7px rgba(0, 0, 0, 0.03);
 						position: relative;
 						object-fit: cover;
+						transition: all 0.3s ease-in-out;
 					}
 
 					&::after {
@@ -249,7 +282,14 @@ body {
 					}
 				}
 
+				&:hover {
+					.item__info {
+						opacity: 0.6;
+					}
+				}
+
 				.item__info {
+					transition: opacity 0.3s ease-in-out;
 					position: absolute;
 					bottom: 40px;
 					left: 50%;
@@ -257,6 +297,7 @@ body {
 					color: #fff;
 					z-index: 10;
 					width: 100%;
+
 					h3 {
 						font-size: 48px;
 						font-weight: 700;
