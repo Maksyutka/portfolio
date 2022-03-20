@@ -452,6 +452,8 @@ body {
 			color: #777777;
 
 			.telegram {
+				-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+				-webkit-tap-highlight-color: transparent;
 				transition: color 0.3s ease-in-out;
 
 				&:hover {
@@ -461,6 +463,8 @@ body {
 			}
 
 			.mail {
+				-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+				-webkit-tap-highlight-color: transparent;
 				transition: color 0.3s ease-in-out;
 
 				&:hover {
@@ -470,6 +474,8 @@ body {
 			}
 
 			.num {
+				-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+				-webkit-tap-highlight-color: transparent;
 				transition: color 0.3s ease-in-out;
 
 				&:hover {
